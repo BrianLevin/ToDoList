@@ -11,12 +11,13 @@ const app = express();
 app.get("/", function(req, res){
 
 var today = new Date();
+var currentDay =  today.getDay();
 
 if (today.getDay() == 6 || today.getDay() == 0 ){
 
-res.send(" It's the weekend!")
+res.send(" <h1>It's the weekend!</h1>")
 } else{
-res.send("I have work")
+res.send("<h1>I have work.</h1>")
 
 }
 
