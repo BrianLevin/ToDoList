@@ -15,9 +15,11 @@ var currentDay =  today.getDay();
 
 if (today.getDay() == 6 || today.getDay() == 0 ){
 
-res.send(" <h1>It's the weekend!</h1>")
+res.write(" <h1>It's the weekend!</h1>");
 } else{
-res.send("<h1>I have work.</h1>")
+res.write("<p>I have work.</p>");
+res.write("<h1>It's not the weekend.</h1>")
+res.send();
 
 }
 
