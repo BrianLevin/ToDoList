@@ -17,9 +17,7 @@ if (today.getDay() == 6 || today.getDay() == 0 ){
 
 res.write(" <h1>It's the weekend!</h1>");
 } else{
-res.write("<p>I have work.</p>");
-res.write("<h1>It's not the weekend.</h1>")
-res.send();
+res.sendFile(__dirname + "/index.html")
 
 }
 
