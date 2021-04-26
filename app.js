@@ -31,9 +31,7 @@ var today = new Date();
 
 
 
-res.render("list", {
-kindOfDay: day
-});
+res.render("list", {kindOfDay: day, newListItem});
 });
 
 
@@ -41,7 +39,9 @@ kindOfDay: day
 app.post("/", function(req, res){
 
  var item= req.body.newItem
-console.log(item);
+
+res.render("list", {newListItem: item});
+
 })
 
 
