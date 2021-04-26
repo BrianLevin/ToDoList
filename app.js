@@ -11,7 +11,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true})); 
 
 app.get("/", function(req, res){
 
@@ -40,8 +40,8 @@ kindOfDay: day
 
 app.post("/", function(req, res){
 
-req.body.newItem
-
+ var item= req.body.newItem
+console.log(item);
 })
 
 
