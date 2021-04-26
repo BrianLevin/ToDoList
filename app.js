@@ -26,7 +26,7 @@ var today = new Date();
 
  };
 
-  var day = today.toLocaleDateString("en-us". options );
+  var day = today.toLocaleDateString("en-US", options );
 // var currentDay =  today.getDay();
 
 // var day = "";
