@@ -9,6 +9,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+var item= "";
+
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({extended: true})); 
@@ -38,7 +40,7 @@ res.render("list", {kindOfDay: day, newListItem : item});
 
 app.post("/", function(req, res){
 
- var item= req.body.newItem
+  item= req.body.newItem
 
 res.redirect("/");
 
