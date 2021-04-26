@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-var items= [];
+var items= [" Buy Food", "Cook Food", "Eat Food"];
 
 app.set("view engine", "ejs");
 
@@ -33,7 +33,7 @@ var today = new Date();
 
 
 
-res.render("list", {kindOfDay: day, newListItem : items});
+res.render("list", {kindOfDay: day, newListItems: items});
 });
 
 
