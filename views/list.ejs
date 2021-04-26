@@ -9,16 +9,33 @@
   </head>
 
   <body>
-    <h1><%= kindOfDay %></h1>
 
-    <ul>
+  <div class = "box" id= "heading">  
+  
+   <h1><%= kindOfDay %></h1>
+  </div>
+
+<div class= "box" id = ""> 
+    
 
 
        <% for (vari=0; i < newListItems.length; i++){ %>
-<li> <%= newListItems[i] %></li>
+
+<div class= "item">
+
+<input type= "checkbox">
+<p> <%= newListItems[i] %></p>
+
+</div>
+
+
 
        <% }  %>
-    </ul>
+    
+</div>
+   
+
+ 
 
     <form class= "" action= "/" method= "post" >
     <input type = "text" name= "newItem">
