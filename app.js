@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-var item= "";
+var items= [];
 
 app.set("view engine", "ejs");
 
@@ -33,14 +33,16 @@ var today = new Date();
 
 
 
-res.render("list", {kindOfDay: day, newListItem : item});
+res.render("list", {kindOfDay: day, newListItem : items});
 });
 
 
 
 app.post("/", function(req, res){
 
-  item= req.body.newItem
+  var  item= req.body.newItem;
+
+  items.push(item);
 
 res.redirect("/");
 
