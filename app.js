@@ -45,6 +45,7 @@ res.render("list", {listTitle: day, newListItems: items});
 
 app.post("/", function(req, res){
 
+console.log(req.body)
   let  item= req.body.newItem;
 
   items.push(item);
