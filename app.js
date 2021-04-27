@@ -7,9 +7,12 @@ const bodyParser = require("body-parser");
 
 
 
+
 const app = express();
 
-var items= [" Buy Food", "Cook Food", "Eat Food"];
+let items= [" Buy Food", "Cook Food", "Eat Food"];
+
+let workItems = [];
 
 app.set("view engine", "ejs");
 
@@ -48,8 +51,14 @@ app.post("/", function(req, res){
 
 res.redirect("/");
 
+
 })
 
+app.get("/work", function(req,res){
+
+res.render("list", {listTitle: "work list" newListItems: workItems});
+
+})
 
 app.listen(3000, function () {
     console.log("Server is running on port 3000!");
