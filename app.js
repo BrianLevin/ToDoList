@@ -35,7 +35,7 @@ let today = new Date();
 
 
 
-res.render("list", {kindOfDay: day, newListItems: items});
+res.render("list", {listTitle: day, newListItems: items});
 });
 
 
