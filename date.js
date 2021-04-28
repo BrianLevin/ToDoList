@@ -14,10 +14,10 @@ let today = new Date();
 
  };
 
-  let day = today.toLocaleDateString("en-US", options );
+  return today.toLocaleDateString("en-US", options );
 
 
-return day;
+
 
 }
 
@@ -35,9 +35,9 @@ let today = new Date();
 
  };
 
-  let day = today.toLocaleDateString("en-US", options );
+  return today.toLocaleDateString("en-US", options );
 
 
-return day;
+
 
 }
