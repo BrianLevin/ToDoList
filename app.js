@@ -12,9 +12,9 @@ const date = require( __ dirname + "date.js");
 
 const app = express();
 
-let items= [" Buy Food", "Cook Food", "Eat Food"];
+const items= [" Buy Food", "Cook Food", "Eat Food"];
 
-let workItems = [];
+const workItems = [];
 
 app.set("view engine", "ejs");
 
@@ -24,7 +24,7 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res){
 
-let day= date.getDate();
+const day= date.getDate();
 
 
 
