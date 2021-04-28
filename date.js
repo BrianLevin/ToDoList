@@ -1,3 +1,6 @@
+
+console.log(module);
+
 function getDate(){
 
 let today = new Date();
@@ -14,7 +17,7 @@ let today = new Date();
 
   let day = today.toLocaleDateString("en-US", options );
 
-  
+
 return day;
 
 }
